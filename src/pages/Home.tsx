@@ -9,6 +9,7 @@ import {
   ListItem,
 } from "@mui/material";
 import Reveal from "../hooks/Reveal";
+import alexPhoto from "../assets/images/hero-image-alex.png";
 
 export default function Home() {
   return (
@@ -43,7 +44,7 @@ export default function Home() {
                 mb: 3,
               }}
             >
-              Paleobotanist • Researcher • Educator
+              Paleobotanist • Researcher • Figure Maker
             </Typography>
 
             <Typography
@@ -87,10 +88,13 @@ export default function Home() {
           </Box>
 
           <Box
+            component="img"
+            src={alexPhoto}
+            alt="Alex Lowe"
             sx={{
               width: "100%",
               aspectRatio: "4 / 5",
-              backgroundColor: "#eee",
+              objectFit: "cover",
               border: "1px solid #ddd",
             }}
           />
