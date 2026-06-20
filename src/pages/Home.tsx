@@ -104,23 +104,6 @@ export default function Home() {
       {/* DIVIDER */}
       <Divider sx={{ my: { xs: 4, md: 6 } }} />
 
-      {/* ABOUT ME */}
-      <Reveal>
-        <Box sx={{ mb: { xs: 4, md: 6 } }}>
-          <Typography
-            variant="h4"
-            sx={{
-              fontWeight: 700,
-              mb: 2,
-            }}
-          >
-            Heading
-          </Typography>
-
-          <Typography variant="body1">More information here?</Typography>
-        </Box>
-      </Reveal>
-
       {/* FUN FACTS */}
       <Reveal>
         <Box>
