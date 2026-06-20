@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./reusable_components/Navbar";
 import Footer from "./reusable_components/Footer";
@@ -11,7 +11,7 @@ import ScrollToTop from "./reusable_components/ScrollToTop";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
 
       <Navbar />
@@ -26,7 +26,7 @@ function App() {
       </main>
 
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
