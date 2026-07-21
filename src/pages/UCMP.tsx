@@ -4,12 +4,59 @@ import PageContainer from "../reusable_components/PageContainer";
 export default function UCMPPaleobotany() {
   return (
     <PageContainer title="UCMP Paleobotany">
-      <Typography color="text.secondary" sx={{ mt: 2 }}>
-        Shipping address:
-      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: {
+            xs: "column",
+            md: "row",
+          },
+          gap: {
+            xs: 4,
+            md: 8,
+          },
+          mt: 2,
+        }}
+      >
+        <Box sx={{ flex: 1 }}>
+          <Typography sx={{ fontWeight: 700, mb: 1 }}>Contact:</Typography>
+
+          <Typography>
+            Museum of Paleontology
+            <br />
+            University of California
+            <br />
+            1101 Valley Life
+            <br />
+            Sciences Building Berkeley, CA
+            <br />
+            94720-4780
+            <br />
+            Voice: (510) 642-1821
+            <br />
+            Fax: (510) 642-1822
+          </Typography>
+        </Box>
+
+        <Box sx={{ flex: 1 }}>
+          <Typography sx={{ fontWeight: 700, mb: 1 }}>
+            Shipping address:
+          </Typography>
+
+          <Typography>
+            c/o Alex Lowe, UCMP
+            <br />
+            1101 Valley Life
+            <br />
+            Sciences Building Berkeley, CA
+            <br />
+            94720-4780
+          </Typography>
+        </Box>
+      </Box>
 
       {/* 1. __________ */}
-      <Box sx={{ mb: { xs: 6, md: 10 } }}>
+      <Box sx={{ my: { xs: 2, md: 4 } }}>
         <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
           People
         </Typography>
