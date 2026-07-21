@@ -1,18 +1,10 @@
-import { Container, Typography, Box, Divider } from "@mui/material";
 import fossil1 from "../../assets/images/fossil1.jpg";
 import ResearchSection from "./components/ResearchSection";
+import PageContainer from "../../reusable_components/PageContainer";
 
 export default function Research() {
   return (
-    <Container maxWidth="lg" sx={{ py: { xs: 4, md: 8 } }}>
-      <Box sx={{ mb: { xs: 4, md: 8 } }}>
-        <Typography variant="h3" sx={{ fontWeight: 800 }}>
-          Research
-        </Typography>
-      </Box>
-
-      <Divider sx={{ mb: { xs: 4, md: 6 } }} />
-
+    <PageContainer title="Research">
       <ResearchSection
         title="Plant community and climates across Miocene in PNW"
         description="The Pacific Northwest (PNW), including the states of WA, OR, and ID, is a Cenozoic paleobotanical treasure trove! In particular, Oligocene to Miocene sites abound and showcase deciduous dominated mixed temperate forests in the midst of global climatic changes and pervasive regional volcanism. For example, a peak period of warmth in the mid Miocene (Miocene Climatic Optimum; MCO) likely represents the most recent time atmospheric CO2 reached levels we expect for our near future. My research reconstructs patterns of regional vegetation and climate across this critical time period, following up on work from the early to mid 1900’s that has seen little re-investigation. While my expertise is in plant macrofossils, I collaborate closely with palynologists and phytolith experts to paint a more comprehensive regional picture of vegetation and climate."
@@ -55,6 +47,6 @@ export default function Research() {
         imageAlt="Fossil image"
         showDivider={false}
       />
-    </Container>
+    </PageContainer>
   );
 }

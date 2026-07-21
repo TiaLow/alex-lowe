@@ -1,4 +1,5 @@
-import { Container, Typography, Box, Divider } from "@mui/material";
+import { Typography, Box } from "@mui/material";
+import PageContainer from "../reusable_components/PageContainer";
 
 const resources = [
   {
@@ -21,21 +22,7 @@ const resources = [
 
 export default function Resources() {
   return (
-    <Container maxWidth="lg" sx={{ py: { xs: 4, md: 8 } }}>
-      {/* HEADER */}
-      <Box sx={{ mb: { xs: 5, md: 8 } }}>
-        <Typography variant="h3" sx={{ fontWeight: 800 }}>
-          Resources
-        </Typography>
-
-        <Typography variant="body1" color="text.secondary" sx={{ mt: 2 }}>
-          Selected code repositories, datasets, figures, and applications.
-        </Typography>
-      </Box>
-
-      <Divider sx={{ mb: { xs: 5, md: 7 } }} />
-
-      {/* CONTENT */}
+    <PageContainer title="Resources">
       <Box sx={{ display: "flex", flexDirection: "column", gap: 6 }}>
         {resources.map((section, i) => (
           <Box key={i}>
@@ -83,6 +70,6 @@ export default function Resources() {
           </Box>
         ))}
       </Box>
-    </Container>
+    </PageContainer>
   );
 }
