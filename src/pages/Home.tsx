@@ -10,8 +10,45 @@ import {
 } from "@mui/material";
 import Reveal from "../hooks/Reveal";
 import alexPhoto from "../assets/images/hero-image-alex.png";
+import img1 from "../assets/images/img_ex_1.jpg";
+import img2 from "../assets/images/img_ex_2.jpg";
+import img3 from "../assets/images/img_ex_3.jpg";
+import img4 from "../assets/images/img_ex_4.jpg";
+import img5 from "../assets/images/img_ex_5.jpg";
+import img6 from "../assets/images/img_ex_6.jpg";
+
+import ImageCarousel, {
+  type CarouselImage,
+} from "../reusable_components/ImageCarousel";
 
 export default function Home() {
+  const personalImages: CarouselImage[] = [
+    {
+      src: img1,
+      alt: "Example image 1",
+    },
+    {
+      src: img2,
+      alt: "Example image 2",
+    },
+    {
+      src: img3,
+      alt: "Example image 3",
+    },
+    {
+      src: img4,
+      alt: "Example image 4",
+    },
+    {
+      src: img5,
+      alt: "Example image 5",
+    },
+    {
+      src: img6,
+      alt: "Example image 6",
+    },
+  ];
+
   return (
     <Container maxWidth="lg" sx={{ py: { xs: 4, md: 8 } }}>
       {/* HERO */}
@@ -133,6 +170,10 @@ export default function Home() {
           </List>
         </Box>
       </Reveal>
+
+      {/* FUN IMAGE CAROUSEL */}
+
+      <ImageCarousel images={personalImages} />
     </Container>
   );
 }
