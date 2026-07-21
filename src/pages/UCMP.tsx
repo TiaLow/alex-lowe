@@ -22,9 +22,7 @@ export default function UCMPPaleobotany() {
           <Typography sx={{ fontWeight: 700, mb: 1 }}>Contact:</Typography>
 
           <Typography>
-            Museum of Paleontology
-            <br />
-            University of California
+            Museum of Paleontology, University of California
             <br />
             1101 Valley Life
             <br />

@@ -7,7 +7,9 @@ import {
   Divider,
   List,
   ListItem,
+  Link,
 } from "@mui/material";
+import SocialLinks from "../reusable_components/SocialLinks";
 import alexPhoto from "../assets/images/hero-image-alex.png";
 import img1 from "../assets/images/img_ex_1.jpg";
 import img2 from "../assets/images/img_ex_2.jpg";
@@ -19,6 +21,17 @@ import img6 from "../assets/images/img_ex_6.jpg";
 import ImageCarousel, {
   type CarouselImage,
 } from "../reusable_components/ImageCarousel";
+
+const emailParts = {
+  user: "loweaj",
+  domain: "berkeley.edu",
+};
+
+const EmailLink = () => {
+  const email = `${emailParts.user}@${emailParts.domain}`;
+
+  return <Link href={`mailto:${email}`}>{email}</Link>;
+};
 
 export default function Home() {
   const personalImages: CarouselImage[] = [
@@ -60,16 +73,22 @@ export default function Home() {
         }}
       >
         <Box>
-          <Typography
-            variant="h3"
-            sx={{
-              fontWeight: 800,
-              letterSpacing: 1,
-              mb: 1,
-            }}
-          >
-            Alex Lowe
-          </Typography>
+          <Box sx={{ display: "flex" }}>
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: 700,
+              }}
+            >
+              Alex Lowe
+            </Typography>
+            <Typography
+              variant="h4"
+              sx={{ color: "text.secondary", ml: 2, alignSelf: "end" }}
+            >
+              PhD
+            </Typography>
+          </Box>
 
           <Typography
             variant="h5"
@@ -104,7 +123,7 @@ export default function Home() {
             sx={{
               lineHeight: 1.9,
               color: "text.secondary",
-              mb: 4,
+              mb: 2,
             }}
           >
             My research focuses on understanding how environmental factors shape
@@ -113,12 +132,36 @@ export default function Home() {
             context to our modern planet, and clues to our future.
           </Typography>
 
-          <Stack direction="row" spacing={2} sx={{ flexWrap: "wrap" }}>
-            <Button variant="contained" color="primary">
-              View Research
-            </Button>
+          <EmailLink />
 
-            <Button variant="outlined">Download CV</Button>
+          <Stack
+            direction={{
+              xs: "column",
+              sm: "row",
+            }}
+            sx={{
+              mt: 4,
+              width: "100%",
+              justifyContent: "space-between",
+              alignItems: {
+                xs: "flex-start",
+                sm: "center",
+              },
+            }}
+          >
+            <Stack
+              direction={{
+                xs: "column",
+                sm: "row",
+              }}
+              spacing={2}
+            >
+              <Button variant="contained">View Research</Button>
+
+              <Button variant="outlined">Download CV</Button>
+            </Stack>
+
+            <SocialLinks />
           </Stack>
         </Box>
 
