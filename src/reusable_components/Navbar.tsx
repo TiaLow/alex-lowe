@@ -25,7 +25,14 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <AppBar position="sticky" elevation={0} color="inherit">
+    <AppBar
+      position="sticky"
+      elevation={0}
+      color="inherit"
+      sx={{
+        backgroundColor: "grey.200",
+      }}
+    >
       <Toolbar
         sx={{
           maxWidth: "lg",
