@@ -12,7 +12,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -22,6 +22,7 @@ const navItems = [
 ];
 
 export default function Navbar() {
+  const location = useLocation();
   const [open, setOpen] = useState(false);
 
   return (
@@ -65,6 +66,11 @@ export default function Navbar() {
               component={RouterLink}
               to={item.path}
               color="inherit"
+              sx={{
+                color:
+                  location.pathname === item.path ? "primary.main" : "inherit",
+                fontWeight: location.pathname === item.path ? 700 : 400,
+              }}
             >
               {item.label}
             </Button>
@@ -89,8 +95,33 @@ export default function Navbar() {
                 component={RouterLink}
                 to={item.path}
                 onClick={() => setOpen(false)}
+                sx={{
+                  backgroundColor:
+                    location.pathname === item.path
+                      ? "action.selected"
+                      : "transparent",
+                  "&:hover": {
+                    backgroundColor:
+                      location.pathname === item.path
+                        ? "action.selected"
+                        : "action.hover",
+                  },
+                }}
               >
-                <ListItemText primary={item.label} />
+                <ListItemText
+                  primary={item.label}
+                  slotProps={{
+                    primary: {
+                      sx: {
+                        fontWeight: location.pathname === item.path ? 700 : 400,
+                        color:
+                          location.pathname === item.path
+                            ? "primary.main"
+                            : "inherit",
+                      },
+                    },
+                  }}
+                />
               </ListItemButton>
             ))}
           </List>

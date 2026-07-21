@@ -71,14 +71,11 @@ export default function UCMPPaleobotany() {
           culpa qui officia deserunt mollit anim id est laborum.
         </Typography>
       </Box>
-      <Divider
-        sx={{
-          borderColor: "grey.300",
-        }}
-      />
+
+      <Divider sx={{ borderColor: "grey.300" }} />
 
       {/* 2. _____________ */}
-      <Box sx={{ mb: { xs: 6, md: 10 } }}>
+      <Box sx={{ my: { xs: 2, md: 4 } }}>
         <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
           History
         </Typography>
@@ -93,8 +90,10 @@ export default function UCMPPaleobotany() {
         </Typography>
       </Box>
 
+      <Divider sx={{ borderColor: "grey.300" }} />
+
       {/* 3. ___________ */}
-      <Box sx={{ mb: { xs: 6, md: 10 } }}>
+      <Box sx={{ my: { xs: 2, md: 4 } }}>
         <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
           Collection strengths
         </Typography>
@@ -109,8 +108,10 @@ export default function UCMPPaleobotany() {
         </Typography>
       </Box>
 
+      <Divider sx={{ borderColor: "grey.300" }} />
+
       {/* 4. _________ */}
-      <Box>
+      <Box sx={{ my: { xs: 2, md: 4 } }}>
         <Typography variant="h5" sx={{ fontWeight: 700, mb: 2 }}>
           Statement of support/collab and how to visit
         </Typography>
