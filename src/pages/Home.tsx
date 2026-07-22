@@ -74,7 +74,7 @@ export default function Home() {
   ];
 
   return (
-    <Container maxWidth="lg" sx={{ py: { xs: 4, md: 8 } }}>
+    <Container maxWidth="lg" sx={{ py: { xs: 2, md: 4 } }}>
       {/* HERO */}
       <Box
         sx={{

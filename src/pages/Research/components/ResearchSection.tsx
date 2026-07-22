@@ -31,7 +31,7 @@ export default function ResearchSection({
       <Box
         component="section"
         sx={{
-          py: { xs: 5, md: 4 },
+          py: { xs: 1, md: 2 },
         }}
       >
         <Box

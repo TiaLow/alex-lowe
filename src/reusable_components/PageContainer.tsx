@@ -8,9 +8,9 @@ type PageContainerProps = {
 
 export default function PageContainer({ title, children }: PageContainerProps) {
   return (
-    <Container maxWidth="lg" sx={{ py: { xs: 4, md: 8 } }}>
+    <Container maxWidth="lg" sx={{ py: { xs: 2, md: 4 } }}>
       {/* PAGE TITLE */}
-      <Box sx={{ mb: { xs: 5, md: 8 } }}>
+      <Box sx={{ mb: { xs: 2, md: 4 } }}>
         <Typography
           variant="h3"
           sx={{
@@ -23,7 +23,7 @@ export default function PageContainer({ title, children }: PageContainerProps) {
 
       <Divider
         sx={{
-          mb: { xs: 5, md: 7 },
+          mb: { xs: 2, md: 4 },
           borderColor: "grey.300",
         }}
       />
