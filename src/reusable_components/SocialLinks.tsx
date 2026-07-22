@@ -13,7 +13,7 @@ export default function SocialLinks() {
       <Tooltip title="GitHub" arrow>
         <IconButton
           component="a"
-          href="https://github.com/"
+          href="https://github.com/lowepb"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"

@@ -59,6 +59,18 @@ export default function Home() {
       src: img6,
       alt: "Example image 6",
     },
+    {
+      src: img4,
+      alt: "Example image 4",
+    },
+    {
+      src: img5,
+      alt: "Example image 5",
+    },
+    {
+      src: img6,
+      alt: "Example image 6",
+    },
   ];
 
   return (
@@ -178,38 +190,35 @@ export default function Home() {
         />
       </Box>
 
-      {/* DIVIDER */}
       <Divider sx={{ my: { xs: 4, md: 6 } }} />
 
       {/* FUN FACTS */}
       <Box>
         <Typography
-          variant="h4"
+          variant="h5"
           sx={{
             fontWeight: 700,
             mb: 2,
           }}
         >
-          Fun Facts
+          At a Glance / Beyond the CV
         </Typography>
 
         <List sx={{ listStyleType: "disc", pl: 4 }}>
           <ListItem disablePadding sx={{ display: "list-item" }}>
-            Place of birth: Richmond, Virginia
+            <b>Place of birth</b>: Richmond, Virginia
           </ListItem>
           <ListItem disablePadding sx={{ display: "list-item" }}>
-            Academic experience: University of Utah (BS), Brandon University
-            (M.Sc.), University of Washington (Ph.D.), Smithsonian National
-            Museum of Natural History (Postdoc).
+            <b>Academic experience</b>: University of Utah (BS), Brandon
+            University (M.Sc.), University of Washington (Ph.D.), Smithsonian
+            National Museum of Natural History (Postdoc).
           </ListItem>
           <ListItem disablePadding sx={{ display: "list-item" }}>
-            Hobbies: Camping, hiking, rock climbing, snowboarding, music (I play
-            guitar and bass and )
+            <b>Hobbies</b>: Camping, hiking, rock climbing, snowboarding, music
+            (I play guitar and bass)
           </ListItem>
         </List>
       </Box>
-
-      {/* FUN IMAGE CAROUSEL */}
 
       <ImageCarousel images={personalImages} />
     </Container>
