@@ -18,6 +18,7 @@ const resources = [
     title: "R Shiny apps (can leave blank for now)",
     items: ["Flora of the Metasequoia"],
   },
+  { title: "YouTube", items: ["Rockhouding presentation"] },
 ];
 
 export default function Resources() {
