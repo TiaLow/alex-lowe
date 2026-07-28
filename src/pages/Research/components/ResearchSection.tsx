@@ -6,11 +6,12 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
+import type { ReactNode } from "react";
 
 type ResearchSectionProps = {
   title: string;
-  description: string;
-  bullets: string[];
+  description: ReactNode;
+  bullets?: string[];
   image: string;
   imageAlt: string;
   reverse?: boolean;
@@ -66,26 +67,28 @@ export default function ResearchSection({
 
             <Typography sx={{ mb: 2 }}>{description}</Typography>
 
-            <List
-              disablePadding
-              sx={{
-                listStyleType: "disc",
-                pl: 3,
-              }}
-            >
-              {bullets.map((bullet) => (
-                <ListItem
-                  key={bullet}
-                  disablePadding
-                  sx={{
-                    display: "list-item",
-                    mb: 0.5,
-                  }}
-                >
-                  <ListItemText primary={bullet} />
-                </ListItem>
-              ))}
-            </List>
+            {bullets && (
+              <List
+                disablePadding
+                sx={{
+                  listStyleType: "disc",
+                  pl: 3,
+                }}
+              >
+                {bullets.map((bullet) => (
+                  <ListItem
+                    key={bullet}
+                    disablePadding
+                    sx={{
+                      display: "list-item",
+                      mb: 0.5,
+                    }}
+                  >
+                    <ListItemText primary={bullet} />
+                  </ListItem>
+                ))}
+              </List>
+            )}
           </Box>
 
           {/* Image */}

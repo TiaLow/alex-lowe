@@ -9,6 +9,7 @@ import {
   ListItem,
   Link,
 } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 import SocialLinks from "../reusable_components/SocialLinks";
 import alexPhoto from "../assets/images/hero-image-alex.png";
 import img1 from "../assets/images/img_ex_1.jpg";
@@ -122,12 +123,15 @@ export default function Home() {
             }}
           >
             I am a Sr. Museum Scientist in Paleobotany at the University of
-            California Museum of Paleontology (UCMP) at UC Berkeley. In this
-            role, I manage the paleobotany collections and UCMP lab spaces, and
-            both lead and support scientific research. As a paleobotanist, I
-            specialize mainly in Cenozoic plant macrofossils but I also pursue
-            research interests in plant ecophysiology, geochronology, and
-            geochemistry.
+            California Museum of Paleontology (
+            <Link href="https://ucmp.berkeley.edu/" target="_blank">
+              UCMP
+            </Link>
+            ) at UC Berkeley. In this role, I manage the paleobotany collections
+            and UCMP lab spaces, and both lead and support scientific research.
+            As a paleobotanist, I specialize mainly in Cenozoic plant
+            macrofossils but I also pursue research interests in plant
+            ecophysiology, geochronology, and geochemistry.
           </Typography>
 
           <Typography
@@ -168,7 +172,9 @@ export default function Home() {
               }}
               spacing={2}
             >
-              <Button variant="contained">View Research</Button>
+              <Button variant="contained" component={RouterLink} to="/research">
+                View Research
+              </Button>
 
               <Button variant="outlined">Download CV</Button>
             </Stack>
@@ -201,7 +207,7 @@ export default function Home() {
             mb: 2,
           }}
         >
-          At a Glance / Beyond the CV
+          At a Glance
         </Typography>
 
         <List sx={{ listStyleType: "disc", pl: 4 }}>
@@ -211,11 +217,27 @@ export default function Home() {
           <ListItem disablePadding sx={{ display: "list-item" }}>
             <b>Academic experience</b>: University of Utah (BS), Brandon
             University (M.Sc.), University of Washington (Ph.D.), Smithsonian
-            National Museum of Natural History (Postdoc).
+            National Museum of Natural History (Postdoc)
           </ListItem>
           <ListItem disablePadding sx={{ display: "list-item" }}>
-            <b>Hobbies</b>: Camping, hiking, rock climbing, snowboarding, music
-            (I play guitar and bass)
+            First generation Bachelor’s degree
+          </ListItem>
+          <ListItem disablePadding sx={{ display: "list-item" }}>
+            <b>Hobbies</b>: Camping, hiking, rock climbing, cycling,
+            snowboarding, plant walks, music (I play guitar and bass, most
+            recently for the Seattle band{" "}
+            <Link
+              href="https://open.spotify.com/artist/0ISnuIbW4Dhz1T13yRyrNF"
+              target="_blank"
+            >
+              Shelbyville
+            </Link>
+            )
+          </ListItem>
+          <ListItem disablePadding sx={{ display: "list-item" }}>
+            <b>Words to live by</b>: “Of the Seven Dwarfs, the only one who
+            shaved was Dopey. That should tell us something about the wisdom of
+            shaving.” (Tom Robbins, Skinny Legs and All)
           </ListItem>
         </List>
       </Box>

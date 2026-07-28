@@ -1,6 +1,7 @@
-import { IconButton, Box, Tooltip } from "@mui/material";
+import { IconButton, Box, Tooltip, SvgIcon } from "@mui/material";
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { SiGooglescholar } from "react-icons/si";
+import UCMP_logo from "../assets/images/logo_UCMP.png";
 
 export default function SocialLinks() {
   return (
@@ -10,6 +11,20 @@ export default function SocialLinks() {
         gap: 1,
       }}
     >
+      <Tooltip title="University of California Museum of Paleontology" arrow>
+        <IconButton
+          component="a"
+          href="https://ucmp.berkeley.edu/people/alex-lowe/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="University of California Museum of Paleontology"
+        >
+          <SvgIcon viewBox="0 0 24 24">
+            <image href={UCMP_logo} height={24} width={24} />
+          </SvgIcon>
+        </IconButton>
+      </Tooltip>
+
       <Tooltip title="GitHub" arrow>
         <IconButton
           component="a"
@@ -37,7 +52,7 @@ export default function SocialLinks() {
       <Tooltip title="Instagram" arrow>
         <IconButton
           component="a"
-          href="https://www.instagram.com/hotxsos/"
+          href="https://www.instagram.com/hotxsos/" // TODO: update to profesh IG
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
