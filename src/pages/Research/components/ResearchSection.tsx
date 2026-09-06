@@ -11,9 +11,10 @@ import type { ReactNode } from "react";
 type ResearchSectionProps = {
   title: string;
   description: ReactNode;
+  hasPublications?: boolean;
   bullets?: string[];
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
   reverse?: boolean;
   showDivider?: boolean;
 };
@@ -21,6 +22,7 @@ type ResearchSectionProps = {
 export default function ResearchSection({
   title,
   description,
+  hasPublications,
   bullets,
   image,
   imageAlt,
@@ -66,6 +68,12 @@ export default function ResearchSection({
             </Typography>
 
             <Typography sx={{ mb: 2 }}>{description}</Typography>
+
+            {hasPublications && (
+              <Typography sx={{ mb: 2, fontStyle: "italic" }}>
+                Relevant publications:
+              </Typography>
+            )}
 
             {bullets && (
               <List
