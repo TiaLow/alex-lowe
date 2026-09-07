@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import SocialLinks from "../reusable_components/SocialLinks";
-import alexPhoto from "../assets/images/hero-image-alex.png";
+import alexPhoto from "../assets/images/Alex_tshirt_FRONT.png";
 import img1 from "../assets/images/img_ex_1.jpg";
 import img2 from "../assets/images/img_ex_2.jpg";
 import img3 from "../assets/images/img_ex_3.jpg";
@@ -182,16 +182,30 @@ export default function Home() {
         </Box>
 
         <Box
-          component="img"
-          src={alexPhoto}
-          alt="Alex Lowe"
           sx={{
-            width: "100%",
-            aspectRatio: "4 / 5",
-            objectFit: "cover",
-            border: "1px solid #ddd",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-end",
           }}
-        />
+        >
+          <Box
+            component="img"
+            src={alexPhoto}
+            alt="Alex Lowe"
+            sx={{
+              width: "100%",
+              aspectRatio: "4 / 5",
+            }}
+          />
+          <Typography
+            sx={{
+              fontSize: ".8rem",
+              fontStyle: "italic",
+            }}
+          >
+            Original art by Caroline Strömberg
+          </Typography>
+        </Box>
       </Box>
 
       <Divider sx={{ my: { xs: 4, md: 6 } }} />
