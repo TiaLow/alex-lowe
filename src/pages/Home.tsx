@@ -115,7 +115,6 @@ export default function Home() {
           </Typography>
 
           <Typography
-            variant="body1"
             sx={{
               lineHeight: 1.9,
               color: "text.secondary",
@@ -135,7 +134,6 @@ export default function Home() {
           </Typography>
 
           <Typography
-            variant="body1"
             sx={{
               lineHeight: 1.9,
               color: "text.secondary",

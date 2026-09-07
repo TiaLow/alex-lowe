@@ -52,6 +52,10 @@ const theme = createTheme({
       fontSize: "1.1rem",
       lineHeight: 1.9,
     },
+    body2: {
+      fontSize: ".95rem",
+      lineHeight: 1.5,
+    },
 
     button: {
       fontWeight: 700,
