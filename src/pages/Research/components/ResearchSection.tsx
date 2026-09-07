@@ -1,18 +1,11 @@
-import {
-  Box,
-  Divider,
-  List,
-  ListItem,
-  ListItemText,
-  Typography,
-} from "@mui/material";
+import { Box, Divider, List, ListItem, Typography } from "@mui/material";
 import type { ReactNode } from "react";
 
 type ResearchSectionProps = {
   title: string;
   description: ReactNode;
   hasPublications?: boolean;
-  bullets?: string[];
+  bullets?: ReactNode[];
   image?: string;
   imageAlt?: string;
   reverse?: boolean;
@@ -83,16 +76,16 @@ export default function ResearchSection({
                   pl: 3,
                 }}
               >
-                {bullets.map((bullet) => (
+                {bullets.map((bullet, i) => (
                   <ListItem
-                    key={bullet}
+                    key={i}
                     disablePadding
                     sx={{
                       display: "list-item",
                       mb: 0.5,
                     }}
                   >
-                    <ListItemText primary={bullet} />
+                    {bullet}
                   </ListItem>
                 ))}
               </List>
