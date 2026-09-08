@@ -20,7 +20,13 @@ export default function Research() {
             <Typography variant="body2">
               Lowe et al., 2026, Vegetation, climate, and age of the mid-Miocene
               Mascall flora reinvestigated: Leeward environments of the Cascade
-              Mountains, in Journal of Paleontology.
+              Mountains, in{" "}
+              <Link
+                target="blank"
+                href="https://www.cambridge.org/core/journals/journal-of-paleontology/article/vegetation-climate-and-age-of-the-midmiocene-mascall-flora-reinvestigated-leeward-environments-of-the-cascade-mountains/9A587C8FBB74AB59BAF9ED220AF7457D"
+              >
+                Journal of Paleontology.
+              </Link>
             </Typography>
           </>,
           <>
@@ -144,7 +150,7 @@ export default function Research() {
               utility in the fossil record, in{" "}
               <Link
                 target="_blank"
-                href="https://bsapubs.onlinelibrary.wiley.com/doi/abs/10.1002/ajb2.16419?casa_token=t9g1o__kPHsAAAAA:8Rb9iUnNF9yxJ5HddkX2gcR0w55IiSVxIsJdO1Hvn8DwhM5bcKwO2KYnhUVaTbwaeY78L6qm1xSUWUziPA"
+                href="https://bsapubs.onlinelibrary.wiley.com/doi/abs/10.1002/ajb2.70019?casa_token=tLrHUBaCt1oAAAAA%3AV8P2pXwff-KTKQS2FzjGPSetzCAySflw0jso4hL-8ac2gJe6OATs9mwABsjtHnAO-F1jynXYCzJUHE6rFQ"
               >
                 American Journal of Botany.
               </Link>
@@ -240,7 +246,7 @@ export default function Research() {
           </>,
           <>
             <Typography variant="body2">
-              BWest et al., 2020, Paleobotanical proxies for early Eocene
+              West et al., 2020, Paleobotanical proxies for early Eocene
               climates and ecosystem in northern North America from mid to high
               latitudes, in{" "}
               <Link
