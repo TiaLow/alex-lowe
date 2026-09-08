@@ -1,4 +1,3 @@
-import type { CarouselImageV2 } from "../../reusable_components/ImageCarouselV2";
 import pic1 from "../../assets/images/personal/personal_1.jpg";
 import pic2 from "../../assets/images/personal/personal_2.jpg";
 import pic4 from "../../assets/images/personal/personal_4.jpg";
@@ -37,6 +36,7 @@ import pic36 from "../../assets/images/personal/personal_36.jpg";
 import pic37 from "../../assets/images/personal/personal_37.jpg";
 import pic38 from "../../assets/images/personal/personal_38.jpg";
 import pic39 from "../../assets/images/personal/personal_39.jpg";
+import type { CarouselImageV2 } from "../../reusable_components/ImageCarouselV2";
 
 export const personalImages: CarouselImageV2[] = [
   {
