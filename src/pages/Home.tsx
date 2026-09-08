@@ -12,16 +12,9 @@ import {
 import { Link as RouterLink } from "react-router-dom";
 import SocialLinks from "../reusable_components/SocialLinks";
 import alexPhoto from "../assets/images/Alex_tshirt_FRONT.png";
-import img1 from "../assets/images/img_ex_1.jpg";
-import img2 from "../assets/images/img_ex_2.jpg";
-import img3 from "../assets/images/img_ex_3.jpg";
-import img4 from "../assets/images/img_ex_4.jpg";
-import img5 from "../assets/images/img_ex_5.jpg";
-import img6 from "../assets/images/img_ex_6.jpg";
-
-import ImageCarousel, {
-  type CarouselImage,
-} from "../reusable_components/ImageCarousel";
+import pic1 from "../assets/images/personal/personal_1.jpg";
+import type { CarouselImageV2 } from "../reusable_components/ImageCarouselV2";
+import ImageCarouselV2 from "../reusable_components/ImageCarouselV2";
 
 const emailParts = {
   user: "loweaj",
@@ -35,42 +28,20 @@ const EmailLink = () => {
 };
 
 export default function Home() {
-  const personalImages: CarouselImage[] = [
+  const personalImages: CarouselImageV2[] = [
     {
-      src: img1,
+      src: pic1,
       alt: "Example image 1",
+      caption: "This is the first image!",
     },
     {
-      src: img2,
+      src: alexPhoto,
       alt: "Example image 2",
+      caption: "This is the SECOND img hehehe",
     },
     {
-      src: img3,
+      src: alexPhoto,
       alt: "Example image 3",
-    },
-    {
-      src: img4,
-      alt: "Example image 4",
-    },
-    {
-      src: img5,
-      alt: "Example image 5",
-    },
-    {
-      src: img6,
-      alt: "Example image 6",
-    },
-    {
-      src: img4,
-      alt: "Example image 4",
-    },
-    {
-      src: img5,
-      alt: "Example image 5",
-    },
-    {
-      src: img6,
-      alt: "Example image 6",
     },
   ];
 
@@ -254,7 +225,19 @@ export default function Home() {
         </List>
       </Box>
 
-      <ImageCarousel images={personalImages} />
+      <Box
+        sx={{
+          width: {
+            xs: "100%",
+            sm: 400,
+            md: 500,
+            marginLeft: "auto",
+            marginRight: "auto",
+          },
+        }}
+      >
+        <ImageCarouselV2 images={personalImages} aspectRatio="4/3" />
+      </Box>
     </Container>
   );
 }
