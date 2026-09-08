@@ -10,11 +10,10 @@ import {
   Link,
 } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
-import SocialLinks from "../reusable_components/SocialLinks";
-import alexPhoto from "../assets/images/Alex_tshirt_FRONT.png";
-import pic1 from "../assets/images/personal/personal_1.jpg";
-import type { CarouselImageV2 } from "../reusable_components/ImageCarouselV2";
-import ImageCarouselV2 from "../reusable_components/ImageCarouselV2";
+import SocialLinks from "../../reusable_components/SocialLinks";
+import alexPhoto from "../../assets/images/Alex_tshirt_FRONT.png";
+import ImageCarouselV2 from "../../reusable_components/ImageCarouselV2";
+import { personalImages } from "./CarouselImages";
 
 const emailParts = {
   user: "loweaj",
@@ -28,23 +27,6 @@ const EmailLink = () => {
 };
 
 export default function Home() {
-  const personalImages: CarouselImageV2[] = [
-    {
-      src: pic1,
-      alt: "Example image 1",
-      caption: "This is the first image!",
-    },
-    {
-      src: alexPhoto,
-      alt: "Example image 2",
-      caption: "This is the SECOND img hehehe",
-    },
-    {
-      src: alexPhoto,
-      alt: "Example image 3",
-    },
-  ];
-
   return (
     <Container maxWidth="lg" sx={{ py: { xs: 2, md: 4 } }}>
       {/* HERO */}

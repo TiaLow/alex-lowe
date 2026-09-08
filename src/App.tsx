@@ -3,7 +3,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./reusable_components/Navbar";
 import Footer from "./reusable_components/Footer";
 
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import Research from "./pages/Research/Research";
 import Resources from "./pages/Resources";
 import UCMPPaleobotany from "./pages/UCMP";
