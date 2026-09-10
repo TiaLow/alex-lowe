@@ -6,8 +6,7 @@ type ResearchSectionProps = {
   description: ReactNode;
   hasPublications?: boolean;
   bullets?: ReactNode[];
-  image?: string;
-  imageAlt?: string;
+  imageCarousel?: ReactNode;
   reverse?: boolean;
   showDivider?: boolean;
 };
@@ -17,8 +16,7 @@ export default function ResearchSection({
   description,
   hasPublications,
   bullets,
-  image,
-  imageAlt,
+  imageCarousel,
   reverse = false,
   showDivider = true,
 }: ResearchSectionProps) {
@@ -98,20 +96,7 @@ export default function ResearchSection({
               flex: 1,
             }}
           >
-            <Box
-              component="img"
-              src={image}
-              alt={imageAlt}
-              sx={{
-                display: "block",
-                width: "100%",
-                maxWidth: 500,
-                ml: reverse ? 0 : "auto",
-                borderRadius: 3,
-                boxShadow: 4,
-                objectFit: "cover",
-              }}
-            />
+            {imageCarousel}
           </Box>
         </Box>
       </Box>

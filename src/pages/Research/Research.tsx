@@ -1,6 +1,12 @@
 import ResearchSection from "./components/ResearchSection";
 import PageContainer from "../../reusable_components/PageContainer";
-import { Link, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
+import ImageCarouselV2 from "../../reusable_components/ImageCarouselV2";
+import {
+  earlyMioceneImages,
+  geochronImages,
+  miocenePNWPics,
+} from "./CarouselImages";
 
 export default function Research() {
   return (
@@ -55,11 +61,39 @@ export default function Research() {
             </Typography>
           </>,
         ]}
+        imageCarousel={
+          <Box
+            sx={{
+              width: {
+                xs: "100%",
+                sm: "80%",
+                marginLeft: "auto",
+                marginRight: "auto",
+              },
+            }}
+          >
+            <ImageCarouselV2 images={miocenePNWPics} aspectRatio="4/3" />
+          </Box>
+        }
       />
       <ResearchSection
         title=""
         description="Early Miocene floras, representing pre-Miocene Climatic Optimum (MCO) environments, are much more rare in the Pacific Northwest than those from the mid Miocene, representing the height of the MCO. I am currently re-investigating the composition of the early Miocene Collawash and Eagle Creek floras to help fill this time gap and provide a pre-warming baseline to compare MCO floras to. "
         reverse
+        imageCarousel={
+          <Box
+            sx={{
+              width: {
+                xs: "100%",
+                sm: "80%",
+                marginLeft: "auto",
+                marginRight: "auto",
+              },
+            }}
+          >
+            <ImageCarouselV2 images={earlyMioceneImages} aspectRatio="3/2" />
+          </Box>
+        }
       />
 
       <ResearchSection
@@ -108,6 +142,20 @@ export default function Research() {
             </Typography>
           </>,
         ]}
+        imageCarousel={
+          <Box
+            sx={{
+              width: {
+                xs: "100%",
+                sm: "80%",
+                marginLeft: "auto",
+                marginRight: "auto",
+              },
+            }}
+          >
+            <ImageCarouselV2 images={geochronImages} aspectRatio="3/2" />
+          </Box>
+        }
       />
 
       <ResearchSection
