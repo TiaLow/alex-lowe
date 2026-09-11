@@ -6,6 +6,8 @@ import {
   earlyMioceneImages,
   geochronImages,
   miocenePNWPics,
+  okanaganPics,
+  proxiesPics,
 } from "./CarouselImages";
 
 export default function Research() {
@@ -72,7 +74,7 @@ export default function Research() {
               },
             }}
           >
-            <ImageCarouselV2 images={miocenePNWPics} aspectRatio="4/3" />
+            <ImageCarouselV2 images={miocenePNWPics} aspectRatio="3/2" />
           </Box>
         }
       />
@@ -91,7 +93,7 @@ export default function Research() {
               },
             }}
           >
-            <ImageCarouselV2 images={earlyMioceneImages} aspectRatio="3/2" />
+            <ImageCarouselV2 images={earlyMioceneImages} aspectRatio="1/1" />
           </Box>
         }
       />
@@ -259,6 +261,20 @@ export default function Research() {
           </>,
         ]}
         reverse
+        imageCarousel={
+          <Box
+            sx={{
+              width: {
+                xs: "100%",
+                sm: "80%",
+                marginLeft: "auto",
+                marginRight: "auto",
+              },
+            }}
+          >
+            <ImageCarouselV2 images={proxiesPics} aspectRatio="3/4" />
+          </Box>
+        }
       />
 
       <ResearchSection
@@ -357,6 +373,20 @@ export default function Research() {
             </Typography>
           </>,
         ]}
+        imageCarousel={
+          <Box
+            sx={{
+              width: {
+                xs: "100%",
+                sm: "80%",
+                marginLeft: "auto",
+                marginRight: "auto",
+              },
+            }}
+          >
+            <ImageCarouselV2 images={okanaganPics} aspectRatio="4/3" />
+          </Box>
+        }
       />
 
       <ResearchSection

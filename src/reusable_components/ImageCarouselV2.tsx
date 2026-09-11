@@ -6,6 +6,7 @@ export interface CarouselImageV2 {
   src: string;
   caption?: string;
   alt?: string;
+  fit?: "cover" | "contain";
 }
 
 interface ImageCarouselProps {
@@ -85,7 +86,7 @@ export default function ImageCarouselV2({
           aspectRatio,
           overflow: "hidden",
           borderRadius: 2,
-          backgroundColor: "grey.100",
+          backgroundColor: "white",
         }}
       >
         {/* Current image */}
@@ -102,7 +103,7 @@ export default function ImageCarouselV2({
             inset: 0,
             width: "100%",
             height: "100%",
-            objectFit: "cover",
+            objectFit: currentImage.fit ?? "cover",
             display: "block",
           }}
         />
@@ -136,7 +137,7 @@ export default function ImageCarouselV2({
               sx={{
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
+                objectFit: nextImage.fit ?? "cover",
                 display: "block",
               }}
             />
